@@ -22,8 +22,41 @@ export const PackagesPage: React.FC = () => {
   const loadPackages = async () => {
     try {
       setLoading(true);
-      const data = await packagesApi.getAll();
-      setPackages(data);
+
+      // Use mock data for demo (comment out to use real API)
+      const mockData: Package[] = [
+        {
+          id: '550e8400-e29b-41d4-a716-446655440000',
+          name: 'Ultimate Athlete Package',
+          description: 'Complete training and recruiting solution for serious athletes',
+          features: {
+            trainingSessions: 4,
+            metricTracking: true,
+            strengthConditioning: true,
+            recruitingAdvising: true,
+            socialMediaBuilding: true,
+          },
+          isActive: true,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          pricing: [
+            {
+              id: 'price-001',
+              priceAmount: 39900, // $399.00
+              currency: 'usd',
+              billingPeriod: 'monthly',
+              stripePriceId: 'price_demo',
+              isActive: true,
+            },
+          ],
+        },
+      ];
+
+      setPackages(mockData);
+
+      // Uncomment below to use real API instead of mock data
+      // const data = await packagesApi.getAll();
+      // setPackages(data);
     } catch (err) {
       setError('Failed to load packages');
       console.error('Error loading packages:', err);
@@ -37,20 +70,35 @@ export const PackagesPage: React.FC = () => {
       setError(null);
       setSelectedPackage(pkg);
 
-      // For demo purposes, using placeholder data
-      // In production, you'd get this from your auth system
-      const athleteId = 'demo-athlete-id';
-      const email = 'athlete@example.com';
-      const name = 'Demo Athlete';
+      // DEMO MODE: Show a demo message instead of calling API
+      alert(
+        `🎯 Demo Mode\n\n` +
+        `You selected: ${pkg.name}\n` +
+        `Price: $${(pkg.pricing[0]?.priceAmount || 0) / 100}/month\n\n` +
+        `In production, this would:\n` +
+        `1. Create a Stripe customer\n` +
+        `2. Start a subscription\n` +
+        `3. Process payment via Stripe Elements\n\n` +
+        `To enable full functionality:\n` +
+        `- Set up PostgreSQL database\n` +
+        `- Start the backend server\n` +
+        `- Add your Stripe API keys`
+      );
 
-      const response = await paymentsApi.createSubscription({
-        athleteId,
-        packageId: pkg.id,
-        email,
-        name,
-      });
+      // Reset after demo alert
+      setSelectedPackage(null);
 
-      setClientSecret(response.clientSecret);
+      // Uncomment below to use real API
+      // const athleteId = 'demo-athlete-id';
+      // const email = 'athlete@example.com';
+      // const name = 'Demo Athlete';
+      // const response = await paymentsApi.createSubscription({
+      //   athleteId,
+      //   packageId: pkg.id,
+      //   email,
+      //   name,
+      // });
+      // setClientSecret(response.clientSecret);
     } catch (err) {
       setError('Failed to create subscription');
       console.error('Error creating subscription:', err);
