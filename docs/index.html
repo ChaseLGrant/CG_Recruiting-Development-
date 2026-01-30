@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG Recruiting - Demo Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #f5f5f5;
+        }
+
+        .App {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 3rem 2rem;
+        }
+
+        .packages-page {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Package Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Package Card */
+        .package-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .package-header h2 {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .package-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .package-features {
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-features h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .package-features ul {
+            list-style: none;
+        }
+
+        .package-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .subscribe-button {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            background: #2563eb;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .subscribe-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        /* Demo Banner */
+        .demo-banner {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .price-amount {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="App">
+        <div class="demo-banner">
+            📋 DEMO PREVIEW - This is a standalone HTML preview of your CG Recruiting website
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">CG Recruiting</h1>
+                <div class="nav-links">
+                    <a href="#packages">Packages</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="packages-page">
+                <div class="page-header">
+                    <h1>Choose Your Training Package</h1>
+                    <p>Elevate your game with professional training and recruiting services</p>
+                </div>
+
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h2>Ultimate Athlete Package</h2>
+                            <div class="package-price">
+                                <span class="price-amount">$399.00</span>
+                                <span class="price-period">per month</span>
+                            </div>
+                        </div>
+
+                        <p class="package-description">Complete training and recruiting solution for serious athletes</p>
+
+                        <div class="package-features">
+                            <h3>What's Included:</h3>
+                            <ul>
+                                <li>
+                                    <span class="feature-icon">✓</span>
+                                    <strong>4 Training Sessions</strong> per month
+                                </li>
+                                <li>
+                                    <span class="feature-icon">✓</span>
+                                    <strong>Metric Tracking</strong> - Monitor your progress
+                                </li>
+                                <li>
+                                    <span class="feature-icon">✓</span>
+                                    <strong>Full Strength & Conditioning Program</strong>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">✓</span>
+                                    <strong>Full Recruiting Advising</strong> - Get recruited
+                                </li>
+                                <li>
+                                    <span class="feature-icon">✓</span>
+                                    <strong>Social Media Building</strong> - Build your brand
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="subscribe-button" onclick="showDemo()">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <p>&copy; 2026 CG Recruiting. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showDemo() {
+            alert(
+                '🎯 Demo Mode\n\n' +
+                'You selected: Ultimate Athlete Package\n' +
+                'Price: $399/month\n\n' +
+                'In production, this would:\n' +
+                '1. Create a Stripe customer\n' +
+                '2. Start a subscription\n' +
+                '3. Process payment via Stripe Elements\n\n' +
+                'To enable full functionality:\n' +
+                '- Set up PostgreSQL database\n' +
+                '- Start the backend server\n' +
+                '- Add your Stripe API keys'
+            );
+        }
+    </script>
+</body>
+</html>
