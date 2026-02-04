@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Membership plans for CG Recruiting & Development. Choose from Basic, Complete, or Elite tiers for baseball training and recruiting support.">
+  <title>Pricing & Memberships | CG Recruiting & Development</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚾</text></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CG Recruiting & Development Home">
+        CG<span>R&D</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li class="nav-dropdown">
+            <a href="programs.html" class="nav-link nav-dropdown-toggle">
+              Programs
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="recruiting.html" class="nav-dropdown-link">Recruiting Advising</a></li>
+              <li><a href="development.html" class="nav-dropdown-link">Player Development</a></li>
+              <li><a href="programs.html" class="nav-dropdown-link">All Programs</a></li>
+            </ul>
+          </li>
+          <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li><a href="results.html" class="nav-link">Results</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary">Book a Call</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="programs.html" class="nav-link">Programs</a>
+      <a href="recruiting.html" class="nav-link">Recruiting</a>
+      <a href="development.html" class="nav-link">Development</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="results.html" class="nav-link">Results</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="book.html" class="btn btn-primary">Book a Call</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Pricing</span>
+        </nav>
+        <h1>Membership Plans</h1>
+        <p>Flexible options designed to meet you where you are. No long-term contracts. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" aria-labelledby="pricing-heading">
+      <div class="container">
+        <h2 id="pricing-heading" class="sr-only">Choose Your Plan</h2>
+
+        <!-- Monthly/Annual Toggle -->
+        <div class="pricing-toggle fade-in" role="group" aria-label="Billing period">
+          <span class="pricing-toggle-label active" data-pricing="monthly">Monthly</span>
+          <button class="pricing-toggle-switch" aria-pressed="false" aria-label="Toggle annual billing" tabindex="0"></button>
+          <span class="pricing-toggle-label" data-pricing="annual">
+            Pay in Full
+            <span class="pricing-save">Save 15%</span>
+          </span>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-cards stagger-children">
+          <!-- Basic Tier -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Tier 1</div>
+            <h3 class="pricing-name">Basic</h3>
+            <p class="pricing-tagline">4 Lessons / Month — Best for athletes focused purely on skill development</p>
+            <div class="pricing-price">
+              <!-- EDIT MONTHLY PRICE HERE -->
+              <div data-price="monthly">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/month</span>
+              </div>
+              <!-- EDIT ANNUAL PRICE HERE (typically monthly x 12 x 0.85) -->
+              <div data-price="annual" style="display: none;">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/year</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                4 private lessons per month
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Monthly development plan
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Basic recruiting checklist
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Email templates for coach outreach
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Monthly progress check-in call
+              </div>
+            </div>
+            <div class="pricing-cta">
+              <a href="join.html" class="btn btn-dark">Join Now</a>
+              <a href="book.html" class="btn btn-ghost">Book a Call First</a>
+            </div>
+          </div>
+
+          <!-- Complete Tier (Featured) -->
+          <div class="pricing-card featured">
+            <div class="pricing-tier">Tier 2</div>
+            <h3 class="pricing-name">Complete</h3>
+            <p class="pricing-tagline">Recruiting + Development — Best for athletes serious about playing college baseball</p>
+            <div class="pricing-price">
+              <!-- EDIT MONTHLY PRICE HERE -->
+              <div data-price="monthly">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/month</span>
+              </div>
+              <!-- EDIT ANNUAL PRICE HERE -->
+              <div data-price="annual" style="display: none;">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/year</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                4 private lessons per month
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Recruiting advising</strong> (messaging strategy, school targeting)
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Metric tracking dashboard</strong> (velo, exit velo, times)
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                1-2 video feedback reviews per month
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>NIL/social media optimization</strong> (monthly review)
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Bi-weekly progress calls
+              </div>
+            </div>
+            <div class="pricing-cta">
+              <a href="join.html" class="btn btn-primary">Join Now</a>
+              <a href="book.html" class="btn btn-ghost">Book a Call First</a>
+            </div>
+          </div>
+
+          <!-- Elite Tier -->
+          <div class="pricing-card">
+            <div class="pricing-tier">Tier 3</div>
+            <h3 class="pricing-name">Elite</h3>
+            <p class="pricing-tagline">Done-With-You Recruiting — Best for athletes who want maximum support</p>
+            <div class="pricing-price">
+              <!-- EDIT MONTHLY PRICE HERE -->
+              <div data-price="monthly">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/month</span>
+              </div>
+              <!-- EDIT ANNUAL PRICE HERE -->
+              <div data-price="annual" style="display: none;">
+                <span class="pricing-amount">$___</span>
+                <span class="pricing-period">/year</span>
+              </div>
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>6-8 private lessons per month</strong> (weekly training)
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Priority recruiting advising</strong> (24-48hr response time)
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Custom school list + outreach plan</strong> built for you
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Monthly call with athlete + parent</strong>
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Ongoing NIL/social growth plan
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                <strong>Seasonal highlight video guidance</strong>
+              </div>
+              <div class="pricing-feature">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+                </svg>
+                Full metric tracking + dashboard
+              </div>
+            </div>
+            <div class="pricing-cta">
+              <a href="join.html" class="btn btn-dark">Join Now</a>
+              <a href="book.html" class="btn btn-ghost">Book a Call First</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section section" aria-labelledby="comparison-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 id="comparison-heading">Compare Plans</h2>
+          <p>See exactly what's included in each membership tier.</p>
+        </div>
+
+        <div class="comparison-table-wrapper fade-in">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Basic</th>
+                <th scope="col">Complete</th>
+                <th scope="col">Elite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feature-name">Private lessons per month</td>
+                <td>4</td>
+                <td>4</td>
+                <td>6-8</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Development plan</td>
+                <td><span class="comparison-check">✓</span></td>
+                <td><span class="comparison-check">✓</span></td>
+                <td><span class="comparison-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Recruiting advising</td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-check">✓</span></td>
+                <td><span class="comparison-check">✓</span> Priority</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Metric tracking dashboard</td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-check">✓</span></td>
+                <td><span class="comparison-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Video feedback</td>
+                <td><span class="comparison-x">—</span></td>
+                <td>1-2/month</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td class="feature-name">NIL/social media support</td>
+                <td><span class="comparison-x">—</span></td>
+                <td>Monthly</td>
+                <td>Ongoing</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Custom school list</td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Parent included in calls</td>
+                <td><span class="comparison-x">—</span></td>
+                <td>Optional</td>
+                <td><span class="comparison-check">✓</span> Monthly</td>
+              </tr>
+              <tr>
+                <td class="feature-name">Highlight video guidance</td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-x">—</span></td>
+                <td><span class="comparison-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="feature-name">Response time</td>
+                <td>Standard</td>
+                <td>48-72hr</td>
+                <td>24-48hr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee section" aria-labelledby="guarantee-heading">
+      <div class="container">
+        <div class="guarantee-card fade-in">
+          <div class="guarantee-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+              <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 id="guarantee-heading">Our Commitment to You</h3>
+          <p>We don't guarantee scholarships—no one can. What we guarantee is <strong>a process</strong>: consistent training, strategic recruiting guidance, and real support from people who've been through it. We're invested in your progress, and we'll work alongside you every step of the way. If you follow the plan and put in the work, you'll be in the best position possible to reach your goals.</p>
+          <p style="margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-gray-500);">
+            All memberships are month-to-month. Cancel anytime with no penalty. Annual prepay plans can be refunded on a prorated basis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="faq section bg-gray" aria-labelledby="pricing-faq-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 id="pricing-faq-heading">Questions About Pricing?</h2>
+        </div>
+
+        <div class="faq-grid fade-in">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I switch plans later?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <div class="faq-answer-inner">
+                <p>Yes. You can upgrade or downgrade your membership at any time. Changes take effect at the start of your next billing cycle. If you upgrade mid-cycle, we'll prorate the difference.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What if I need to pause my membership?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <div class="faq-answer-inner">
+                <p>We understand that life happens. You can pause your membership for up to 30 days per year. Just let us know in advance, and we'll hold your spot without charging you during the pause period.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you offer family discounts?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <div class="faq-answer-inner">
+                <p>Yes. If you have multiple athletes in your family, contact us about sibling discounts. We want to make training accessible for the whole family.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What payment methods do you accept?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <div class="faq-answer-inner">
+                <p>We accept all major credit cards, debit cards, and ACH bank transfers. Payments are processed securely, and you'll receive a receipt for every transaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band section" aria-labelledby="pricing-cta-heading">
+      <div class="container">
+        <h2 id="pricing-cta-heading">Not Sure Which Plan Is Right?</h2>
+        <p>Book a free call and we'll help you figure out the best path forward based on your goals, timeline, and budget.</p>
+        <div class="btn-group">
+          <a href="book.html" class="btn btn-primary btn-lg">Book a Free Call</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Ask a Question</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="CG Recruiting & Development Home">
+            CG<span>R&D</span>
+          </a>
+          <p>Elite baseball recruiting guidance and player development for high school athletes ready to compete at the next level.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Programs</h4>
+          <nav class="footer-links" aria-label="Programs">
+            <a href="programs.html" class="footer-link">All Programs</a>
+            <a href="recruiting.html" class="footer-link">Recruiting Advising</a>
+            <a href="development.html" class="footer-link">Player Development</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Company</h4>
+          <nav class="footer-links" aria-label="Company">
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="results.html" class="footer-link">Results</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Get Started</h4>
+          <nav class="footer-links" aria-label="Get started">
+            <a href="book.html" class="footer-link">Book a Call</a>
+            <a href="join.html" class="footer-link">Join Now</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2024 CG Recruiting & Development. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
